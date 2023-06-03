@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Person {
@@ -13,6 +14,8 @@ public class Person {
 	private String name;
 	private String address;
 	private long phno;
+	@OneToOne
+	private PanCard pancard;
 	public int getId() {
 		return id;
 	}
